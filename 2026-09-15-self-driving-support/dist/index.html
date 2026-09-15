@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Self-driving customer support</title>
+    <title>Self-driving support</title>
     <style>
       @font-face { font-family:"RoundHog"; font-style:normal; font-weight:400; font-display:swap; src:url("assets/fonts/RoundHog.woff2") format("woff2"); }
       @font-face { font-family:"RoundHog"; font-style:normal; font-weight:500; font-display:swap; src:url("assets/fonts/RoundHog-Medium.woff2") format("woff2"); }
@@ -723,6 +723,7 @@
       .answer-scene p { margin:.35rem 0 .55rem; color:#65645e; font-size:.74rem; font-weight:750; }
       .answer-ready { display:inline-block; padding:.3rem .46rem; border-radius:999px; background:#e9f7ec; color:#39734d; font-size:.64rem; font-weight:850; }
       .answer-code { margin-top:.55rem; padding:.4rem .5rem; border-radius:6px; background:#292827; color:#b8e3b6; font:600 .6rem/1.3 ui-monospace,SFMono-Regular,monospace; }
+      .pr-summary { display:block; margin-top:.45rem; color:#53775f; font-size:.64rem; font-weight:850; }
       .payoff-metric { position:absolute; z-index:1; left:50%; bottom:12px; display:flex; align-items:center; gap:1rem; padding:.78rem 1.05rem; border:2px solid #f4a57f; border-radius:14px; background:#fff6ec; box-shadow:5px 5px 0 rgba(245,78,0,.13); transform:translateX(-50%); }
       .payoff-metric > div { display:flex; flex-direction:column; gap:.12rem; } .payoff-metric small { color:#8b5947; font-size:.6rem; font-weight:850; letter-spacing:.07em; text-transform:uppercase; } .payoff-metric span { color:#8b5947; font-size:.88rem; font-weight:850; text-decoration:line-through; } .payoff-metric b { color:#c83e08; font-size:1.16rem; letter-spacing:-.04em; white-space:nowrap; } .payoff-metric i { color:var(--orange); font-style:normal; font-size:1.15rem; font-weight:900; }
       .map-node { position:absolute; z-index:1; border:2px solid #d8d9d2; border-radius:18px; background:#fff; box-shadow:7px 7px 0 rgba(21,20,19,.1); }
@@ -770,14 +771,14 @@
     </style>
   </head>
   <body>
-    <main class="deck" aria-label="Self-driving customer support presentation">
+    <main class="deck" aria-label="Self-driving support presentation">
       <img class="deck-brand" src="assets/posthog-logo.svg" alt="PostHog" />
-      <section class="slide active title-slide" aria-label="Slide 3: Self-driving customer support">
+      <section class="slide active title-slide" aria-label="Slide 3: Self-driving support">
         <div class="title-grid">
           <div>
             <p class="kicker">Chatbase × PostHog: Innovation Night</p>
-            <h1>Support that gets there first</h1>
-            <p>When something breaks, support already has the answer.</p>
+            <h1>Self-driving support gets there first</h1>
+            <p>When something breaks, AI is already working toward an answer.</p>
             <div class="speaker"><div class="portrait-shell"><img class="portrait" src="assets/matt.png" alt="Matt Pua" /></div><div><strong>Matt Pua</strong><span>Product Engineer at PostHog</span></div></div>
           </div>
           <img class="hog" src="https://raw.githubusercontent.com/PostHog/brand/main/assets/hoggies/png/superhero.png" alt="PostHog superhero hedgehog" />
@@ -857,8 +858,8 @@
 
       <section class="slide" aria-label="How PostHog solves the support gap">
         <div class="solution-bridge">
-          <p class="kicker">The PostHog approach</p>
-          <h2>How PostHog solves the support gap</h2>
+          <p class="kicker">Self-driving support</p>
+          <h2>How self-driving support works</h2>
           <p>AI turns scattered evidence into a well-researched report, then asks for one final yes or no before anything ships.</p>
           <div class="solution-path" aria-label="PostHog uses AI to observe signals, orient, decide, and work a report before asking for final human approval">
             <div class="solution-step observe"><img class="step-hog" src="https://imagedelivery.net/lvc9lblm6_VvsB0sE7lLrg/detective-magnifying-glass/md" alt="Detective Hoggy" /><b>01 · Observe · AI</b><strong>See the signals</strong><p>AI watches errors, replays, feedback, and support activity.</p></div>
@@ -928,13 +929,13 @@
         <div class="payoff-layout">
           <p class="kicker">Close the loop</p>
           <h2>Come back to an answer <span class="ooda-phase">(Act)</span></h2>
-          <p>Support comes back with an answer, instead of waiting for an engineering handoff.</p>
-          <div class="payoff-canvas" aria-label="Support is away while agents work continuously, so the team returns to a prepared answer">
+          <p>Support comes back with an answer and a pull request ready for human review.</p>
+          <div class="payoff-canvas" aria-label="Support is away while agents work continuously, so the team returns to a proposed code change and pull request ready for review">
             <svg class="payoff-path" viewBox="0 0 1280 390" preserveAspectRatio="none" aria-hidden="true"><path d="M250 150 C355 150 400 150 490 150 S700 150 820 150 S990 150 1050 150"/><circle cx="250" cy="150" r="10"/><circle cx="640" cy="150" r="10"/><circle cx="1050" cy="150" r="10"/></svg>
             <span class="payoff-time start">Friday · 5 PM</span><span class="payoff-time middle">Agents work 24/7</span><span class="payoff-time end">When support returns</span>
             <article class="away-scene"><small>Customer support</small><strong>Signs off for the day</strong><span class="closed-pill">CLOSED</span><span class="away-note">Problems can still happen overnight and over the weekend.</span><img src="https://imagedelivery.net/lvc9lblm6_VvsB0sE7lLrg/sleeping-hog-chain/lg" alt="Sleeping PostHog hedgehog" /></article>
-            <article class="always-on"><small>Agents keep working</small><h3>The case keeps moving</h3><span>Watch for related signals</span><span>Investigate the report</span><span>Prepare a reviewable fix</span><img src="https://imagedelivery.net/lvc9lblm6_VvsB0sE7lLrg/robo-hog/lg" alt="PostHog robot hedgehog" /></article>
-            <article class="answer-scene"><div class="answer-bar"><span>Inbox / Reports</span><span>Ready</span></div><div class="answer-body"><strong>Dashboard export: answer ready</strong><p>Support has the evidence and a next step, without waiting for an engineering handoff.</p><span class="answer-ready">Support can respond now</span><div class="answer-code">fix: handle empty export data</div></div></article>
+            <article class="always-on"><small>Agents keep working</small><h3>The AI prepares the change</h3><span>Watch for related signals</span><span>Investigate the report</span><span>Write and test the code change</span><img src="https://imagedelivery.net/lvc9lblm6_VvsB0sE7lLrg/robo-hog/lg" alt="PostHog robot hedgehog" /></article>
+            <article class="answer-scene"><div class="answer-bar"><span>Pull request #482</span><span>Ready for review</span></div><div class="answer-body"><strong>Fix empty dashboard exports</strong><p>Code change proposed. Tests are passing.</p><span class="answer-ready">Human approval needed</span><div class="answer-code">+ if (!rows.length) return []</div><span class="pr-summary">1 file changed · +4 −1</span></div></article>
             <div class="payoff-metric payoff-outcome"><div><small>Faster answers</small><b>Better customer experience</b></div><i>→</i><div><small>Over time</small><b>Stronger customer loyalty</b></div></div>
           </div>
         </div>
