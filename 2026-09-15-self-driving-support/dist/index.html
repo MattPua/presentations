@@ -45,6 +45,7 @@
       .capability-card { min-height:112px; background:#e7e8e2; border:1px solid #d7d8d1; border-radius:14px; padding:1rem 1.1rem; display:flex; flex-direction:column; justify-content:space-between; }
       .capability-icon { width:42px; height:42px; object-fit:contain; } .capability-card strong { font-size:clamp(.95rem,1.4vw,1.25rem); }
       .corner-hog { position:absolute; width:min(190px,17vw); right:2.5vw; bottom:1.2rem; }
+      .overview-hog { width:min(250px,23vw); height:auto; margin:1.35rem auto 0; object-fit:contain; }
       .questions { min-height:calc(100vh - 8rem); display:flex; flex-direction:column; align-items:center; justify-content:center; text-align:center; }
       .questions h2 { font-size:clamp(4rem,7vw,8rem); margin:0 0 1.8rem; }
       .questions .speaker-hog { width:min(430px,60vw); max-height:55vh; object-fit:contain; }
@@ -744,7 +745,7 @@
       .takeaway { display:grid; grid-template-columns:40px 1fr; gap:1rem; align-items:start; font-size:clamp(1.1rem,1.7vw,1.65rem); line-height:1.3; }
       .takeaway b { color:var(--orange); font-size:1.7rem; line-height:1; }
       .slide.active h1, .slide.active h2, .slide.active .lede { animation:rise .5s both; }
-      .slide.active .hog, .slide.active .speaker-hog, .slide.active .corner-hog { animation:reveal .55s .12s both; }
+      .slide.active .hog, .slide.active .speaker-hog, .slide.active .corner-hog, .slide.active .overview-hog { animation:reveal .55s .12s both; }
       .slide.active .speaker { animation:rise .5s .28s both; }
       .slide.active .capability-card { animation:rise .42s both; }
       .slide.active .capability-card:nth-child(1) { animation-delay:.10s; } .slide.active .capability-card:nth-child(2) { animation-delay:.16s; }
@@ -773,7 +774,7 @@
             <p>When a customer asks for help, support should already have the answer.</p>
             <div class="speaker"><div class="portrait-shell"><img class="portrait" src="assets/matt.png" alt="Matt Pua" /></div><div><strong>Matt Pua</strong><span>Product Engineer at PostHog</span></div></div>
           </div>
-          <img class="hog" src="assets/hoggies/im-the-driver.png" alt="PostHog I'm The Driver hedgehog" />
+          <img class="hog" src="https://imagedelivery.net/lvc9lblm6_VvsB0sE7lLrg/wizard-4/lg" alt="PostHog wizard hedgehog" />
         </div>
       </section>
       <section class="slide opening-seed" aria-label="Slide 1: Customer support">
@@ -939,7 +940,7 @@
             <div class="capability-card"><img class="capability-icon" src="assets/icons/warehouse.svg" alt="" /><strong>Data warehouse</strong></div>
             <div class="capability-card"><img class="capability-icon" src="assets/icons/sql.svg" alt="" /><strong>SQL</strong></div>
           </div>
-          <img class="corner-hog" src="https://imagedelivery.net/lvc9lblm6_VvsB0sE7lLrg/wizard-4/md" alt="PostHog wizard hedgehog" />
+          <img class="overview-hog" src="assets/hoggies/im-the-driver.png" alt="PostHog I'm The Driver hedgehog" />
         </div>
       </section>
 
