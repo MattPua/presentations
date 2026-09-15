@@ -503,57 +503,28 @@
       .signal-rack small { display:block; color:#745bc1; font-size:.67rem; font-weight:900; letter-spacing:.09em; text-transform:uppercase; }
       .signal-rack strong { display:block; margin-top:.28rem; font-size:1.45rem; letter-spacing:-.045em; }
       .signal-rack span { display:block; margin-top:.28rem; color:#625d6e; font-size:.75rem; font-weight:750; }
-      .pipeline-one[data-pipeline-step="1"] .pipeline-source.error,
-      .pipeline-one[data-pipeline-step="2"] .pipeline-source.error,
-      .pipeline-one[data-pipeline-step="3"] .pipeline-source.error,
-      .pipeline-one[data-pipeline-step="4"] .pipeline-source.error,
-      .pipeline-one[data-pipeline-step="1"] .pipeline-source.replay,
-      .pipeline-one[data-pipeline-step="2"] .pipeline-source.replay,
-      .pipeline-one[data-pipeline-step="3"] .pipeline-source.replay,
-      .pipeline-one[data-pipeline-step="4"] .pipeline-source.replay,
-      .pipeline-one[data-pipeline-step="1"] .pipeline-source.feedback,
-      .pipeline-one[data-pipeline-step="2"] .pipeline-source.feedback,
-      .pipeline-one[data-pipeline-step="3"] .pipeline-source.feedback,
-      .pipeline-one[data-pipeline-step="4"] .pipeline-source.feedback,
-      .pipeline-one[data-pipeline-step="1"] .pipeline-source.ticket,
-      .pipeline-one[data-pipeline-step="2"] .pipeline-source.ticket,
-      .pipeline-one[data-pipeline-step="3"] .pipeline-source.ticket,
-      .pipeline-one[data-pipeline-step="4"] .pipeline-source.ticket { opacity:0; }
-      .pipeline-one[data-pipeline-step="1"] .pipeline-source.error,
-      .pipeline-one[data-pipeline-step="2"] .pipeline-source.replay,
-      .pipeline-one[data-pipeline-step="3"] .pipeline-source.feedback,
-      .pipeline-one[data-pipeline-step="4"] .pipeline-source.ticket { animation:source-pop .38s both; }
-      .pipeline-one[data-pipeline-step="2"] .pipeline-source.error,
-      .pipeline-one[data-pipeline-step="3"] .pipeline-source.error,
-      .pipeline-one[data-pipeline-step="4"] .pipeline-source.error,
-      .pipeline-one[data-pipeline-step="3"] .pipeline-source.replay,
-      .pipeline-one[data-pipeline-step="4"] .pipeline-source.replay,
-      .pipeline-one[data-pipeline-step="4"] .pipeline-source.feedback { opacity:1; }
-      .pipeline-one[data-pipeline-step="5"] .pipeline-source.error { animation:to-machine-a .8s both; }
-      .pipeline-one[data-pipeline-step="5"] .pipeline-source.replay { animation:to-machine-b .8s .08s both; }
-      .pipeline-one[data-pipeline-step="5"] .pipeline-source.feedback { animation:to-machine-c .8s .16s both; }
-      .pipeline-one[data-pipeline-step="5"] .pipeline-source.ticket { animation:to-machine-d .8s .24s both; }
-      .pipeline-one[data-pipeline-step="5"] .signal-rack { animation:output-pop .45s .85s both; }
-      .pipeline-one[data-pipeline-step="5"] .pipeline-machine { animation:machine-shake .48s .2s both; }
-      .pipeline-one[data-pipeline-step="0"] .pipeline-machine, .pipeline-one[data-pipeline-step="1"] .pipeline-machine, .pipeline-one[data-pipeline-step="2"] .pipeline-machine, .pipeline-one[data-pipeline-step="3"] .pipeline-machine, .pipeline-one[data-pipeline-step="4"] .pipeline-machine { opacity:.38; filter:saturate(.7); pointer-events:none; }
+      .pipeline-one[data-pipeline-step="1"] .pipeline-source { animation:source-pop .38s both; }
+      .pipeline-one[data-pipeline-step="2"] .pipeline-source.error { animation:to-machine-a .8s both; }
+      .pipeline-one[data-pipeline-step="2"] .pipeline-source.replay { animation:to-machine-b .8s .08s both; }
+      .pipeline-one[data-pipeline-step="2"] .pipeline-source.feedback { animation:to-machine-c .8s .16s both; }
+      .pipeline-one[data-pipeline-step="2"] .pipeline-source.ticket { animation:to-machine-d .8s .24s both; }
+      .pipeline-one[data-pipeline-step="2"] .signal-rack { animation:output-pop .45s .85s both; }
+      .pipeline-one[data-pipeline-step="2"] .pipeline-machine { animation:machine-shake .48s .2s both; }
+      .pipeline-one[data-pipeline-step="0"] .pipeline-machine, .pipeline-one[data-pipeline-step="1"] .pipeline-machine { opacity:.38; filter:saturate(.7); pointer-events:none; }
       .signal-batch { position:absolute; z-index:1; left:7%; top:72px; width:270px; }
       .signal-batch small { display:block; margin-bottom:.55rem; color:#745bc1; font-size:.68rem; font-weight:850; letter-spacing:.08em; text-transform:uppercase; }
       .signal-token { opacity:0; transform:translateY(16px) scale(.94); }
       .pipeline-two[data-pipeline-step="0"] .signal-batch { opacity:0; }
-      .pipeline-two[data-pipeline-step="1"] .signal-token:nth-of-type(1),
-      .pipeline-two[data-pipeline-step="2"] .signal-token:nth-of-type(-n+2),
-      .pipeline-two[data-pipeline-step="3"] .signal-token,
-      .pipeline-two[data-pipeline-step="4"] .signal-token { opacity:1; transform:none; }
-      .pipeline-two[data-pipeline-step="1"] .signal-token:nth-of-type(1),
-      .pipeline-two[data-pipeline-step="2"] .signal-token:nth-of-type(2),
-      .pipeline-two[data-pipeline-step="3"] .signal-token:nth-of-type(3) { animation:source-arrives .35s both; }
-      .pipeline-two[data-pipeline-step="4"] .signal-token:nth-of-type(1) { animation:signal-to-case-a .72s both; }
-      .pipeline-two[data-pipeline-step="4"] .signal-token:nth-of-type(2) { animation:signal-to-case-b .72s .08s both; }
-      .pipeline-two[data-pipeline-step="4"] .signal-token:nth-of-type(3) { animation:signal-to-case-c .72s .16s both; }
-      .pipeline-two[data-pipeline-step="4"] .signal-batch small { animation:source-label-out .28s .28s both; }
+      .pipeline-two[data-pipeline-step="1"] .signal-token,
+      .pipeline-two[data-pipeline-step="2"] .signal-token { opacity:1; transform:none; }
+      .pipeline-two[data-pipeline-step="1"] .signal-token { animation:source-arrives .35s both; }
+      .pipeline-two[data-pipeline-step="2"] .signal-token:nth-of-type(1) { animation:signal-to-case-a .72s both; }
+      .pipeline-two[data-pipeline-step="2"] .signal-token:nth-of-type(2) { animation:signal-to-case-b .72s .08s both; }
+      .pipeline-two[data-pipeline-step="2"] .signal-token:nth-of-type(3) { animation:signal-to-case-c .72s .16s both; }
+      .pipeline-two[data-pipeline-step="2"] .signal-batch small { animation:source-label-out .28s .28s both; }
 .pipeline-two .report-desktop { opacity:0; transform:translateY(16px) scale(.96); }
 .pipeline-two .pipeline-hog { opacity:1; transform:none; }
-      .pipeline-two[data-pipeline-step="4"] .report-desktop { animation:case-file-out .45s .74s both; }
+      .pipeline-two[data-pipeline-step="2"] .report-desktop { animation:case-file-out .45s .74s both; }
       @keyframes source-arrives { from { opacity:0; transform:translateY(16px) scale(.94); } to { opacity:1; transform:none; } }
       @keyframes signal-to-case-a { 0%,35% { opacity:1; transform:none; } 100% { opacity:0; transform:translate(325px,72px) scale(.34); } }
       @keyframes signal-to-case-b { 0%,35% { opacity:1; transform:none; } 100% { opacity:0; transform:translate(302px,24px) scale(.34); } }
@@ -563,7 +534,7 @@
       .signal-token { margin-top:.5rem; padding:.68rem .75rem; border:2px solid #b7a3ff; border-radius:10px; background:#f4f1ff; box-shadow:4px 4px 0 rgba(21,20,19,.09); color:#514b60; font-size:.78rem; font-weight:800; }
       .signal-token:nth-child(3) { margin-left:24px; } .signal-token:nth-child(4) { margin-left:8px; }
       .report-builder { position:absolute; z-index:2; left:42%; top:93px; width:205px; min-height:215px; padding:1rem; border:3px solid var(--orange); border-radius:24px; background:#fff6ec; box-shadow:9px 9px 0 rgba(245,78,0,.15); text-align:center; }
-      .report-builder::after { content:"CASE FILE"; position:absolute; right:-70px; top:75px; padding:.35rem .55rem; border:2px solid var(--orange); border-radius:7px; background:#fff; color:#c83e08; font-size:.65rem; font-weight:900; letter-spacing:.06em; transform:rotate(-8deg); }
+      .report-builder::after { content:"REPORT"; position:absolute; right:-70px; top:75px; padding:.35rem .55rem; border:2px solid var(--orange); border-radius:7px; background:#fff; color:#c83e08; font-size:.65rem; font-weight:900; letter-spacing:.06em; transform:rotate(-8deg); }
       .report-builder h3 { margin:.55rem 0 .5rem; font-size:1.35rem; letter-spacing:-.04em; }
       .report-builder p { margin:0; color:#6c625b; font-size:.72rem; font-weight:700; line-height:1.2; }
       .report-builder .machine-lights i { background:var(--orange); box-shadow:0 0 0 3px #ffe0d0; }
@@ -846,7 +817,7 @@
           <div class="outline-list">
             <div class="outline-item"><b>01</b><div><strong>The OODA loop</strong><span>Observe, orient, decide, act.</span></div></div>
             <div class="outline-item"><b>02</b><div><strong>Why support hears about it late</strong><span>The ticket-first model.</span></div></div>
-            <div class="outline-item"><b>03</b><div><strong>Signals and case files</strong><span>Turn evidence into context.</span></div></div>
+            <div class="outline-item"><b>03</b><div><strong>Signals and reports</strong><span>Turn evidence into context.</span></div></div>
             <div class="outline-item"><b>04</b><div><strong>Turn reports into solutions</strong><span>Agents work while people stay in control.</span></div></div>
             <div class="outline-item"><b>05</b><div><strong>Live demo</strong><span>See the loop in action.</span></div></div>
           </div>
@@ -921,7 +892,7 @@
       <section class="slide reports-slide" aria-label="Turn related signals into a report">
         <div class="reports-layout">
           <p class="kicker">Match the problem</p>
-          <h2>Turn signals into a case file <span class="ooda-phase">(Orient)</span></h2>
+          <h2>Turn signals into a report <span class="ooda-phase">(Orient)</span></h2>
           <p>Several signals can point to the same problem. Group them before you act.</p>
           <div class="reports-canvas pipeline pipeline-two" aria-label="Related signals move through a report builder to create a structured report">
             <svg class="conveyor report-conveyor" viewBox="0 0 1000 64" preserveAspectRatio="none" aria-hidden="true"><rect class="belt-body" x="4" y="12" width="992" height="40" rx="20"/><path class="belt-track" d="M38 32 H962"/><path class="belt-accent" d="M52 32 H948"/><circle class="belt-wheel" cx="62" cy="32" r="18"/><circle class="belt-wheel-dot" cx="62" cy="32" r="6"/><circle class="belt-wheel" cx="938" cy="32" r="18"/><circle class="belt-wheel-dot" cx="938" cy="32" r="6"/></svg>
@@ -1228,8 +1199,8 @@
         if (current === supportIndex && supportStep < 1) { supportStep += 1; supportSlide.dataset.supportState = 'away'; return; }
         if (current === incidentIndex && incidentStep < 6) { setIncidentStep(incidentStep + 1); return; }
         if (current === agendaIndex && agendaStep < 4) { setAgendaStep(agendaStep + 1); return; }
-        if (current === signalPipelineIndex && signalPipelineStep < 5) { setSignalPipelineStep(signalPipelineStep + 1); return; }
-        if (current === reportPipelineIndex && reportPipelineStep < 4) { setReportPipelineStep(reportPipelineStep + 1); return; }
+        if (current === signalPipelineIndex && signalPipelineStep < 2) { setSignalPipelineStep(signalPipelineStep + 1); return; }
+        if (current === reportPipelineIndex && reportPipelineStep < 2) { setReportPipelineStep(reportPipelineStep + 1); return; }
         if (current === proactivePipelineIndex && proactivePipelineStep < 3) { setProactivePipelineStep(proactivePipelineStep + 1); return; }
         if (current === takeawayIndex && takeawayStep < 1) { setTakeawayStep(takeawayStep + 1); return; }
         show(current + 1);
