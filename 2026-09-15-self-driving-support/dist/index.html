@@ -1132,7 +1132,16 @@
         takeawayStep = step;
         takeawaySlide.dataset.takeawayStep = String(step);
       }
-      function show(index) {
+      function requestedSlideIndex() {
+        const requested = Number.parseInt(new URLSearchParams(window.location.search).get('slide'), 10);
+        return Number.isInteger(requested) && requested >= 1 && requested <= slides.length ? requested - 1 : 0;
+      }
+      function updateSlideUrl() {
+        const url = new URL(window.location.href);
+        url.searchParams.set('slide', String(current + 1));
+        history.replaceState(null, '', `${url.pathname}${url.search}${url.hash}`);
+      }
+      function show(index, updateUrl = true) {
         current = (index + slides.length) % slides.length;
         slides.forEach((slide, i) => slide.classList.toggle('active', i === current));
         if (current === supportIndex) { supportStep = 0; supportSlide.dataset.supportState = 'online'; }
@@ -1144,6 +1153,7 @@
         if (current === takeawayIndex) setTakeawayStep(0);
         document.getElementById('count').textContent = `${current + 1} / ${slides.length}`;
         slideJump.value = String(current);
+        if (updateUrl) updateSlideUrl();
       }
       function advance() {
         if (current === supportIndex && supportStep < 1) { supportStep += 1; supportSlide.dataset.supportState = 'away'; return; }
@@ -1169,7 +1179,8 @@
       document.getElementById('next').addEventListener('click', advance);
       slideJump.addEventListener('change', () => show(Number(slideJump.value)));
       document.addEventListener('keydown', (event) => { if (['ArrowRight','PageDown',' '].includes(event.key)) { event.preventDefault(); advance(); } if (['ArrowLeft','PageUp'].includes(event.key)) { event.preventDefault(); retreat(); } if (event.key === 'Home') show(0); if (event.key === 'End') show(slides.length - 1); });
-      show(0);
+      window.addEventListener('popstate', () => show(requestedSlideIndex(), false));
+      show(requestedSlideIndex());
     </script>
   </body>
 </html>
